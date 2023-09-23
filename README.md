@@ -43,7 +43,7 @@ func main() {
     fmt.Println("生成的 Token 为：", token)
 
     // 解析 token
-    parsedToken, err := jwter.WithJti(jti).ParseToken(token)
+    parsedToken, err := jwter.ParseToken(token)
 
     // 验证数据
     ok, err := jwter.Validate(parsedToken)
