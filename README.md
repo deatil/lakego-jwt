@@ -34,8 +34,8 @@ func main() {
         WithSub(sub).
         WithSigningMethod(signingMethod).
         WithSecret(secret).
-        WithPrivateKey(string(privateKeyData)).
-        WithPublicKey(string(publicKeyData)).
+        WithPrivateKey(privateKeyData).
+        WithPublicKey(publicKeyData).
         WithPrivateKeyPassword(privateKeyPassword).
         WithClaim(k, v)
 
