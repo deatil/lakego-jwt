@@ -4,7 +4,7 @@ import (
     "errors"
 
     "github.com/golang-jwt/jwt/v4"
-    jwt_ecdsa "github.com/deatil/lakego-jwt/jwt/ecdsa"
+    jwt_ecdsa "github.com/deatil/lakego-jwt/signer/ecdsa"
 )
 
 // SignerES256
@@ -49,7 +49,7 @@ func init() {
     AddSigner("ES512", func(conf IConfig) ISigner {
         return SignerES512(conf)
     })
-    AddSigner("ES512K", func(conf IConfig) ISigner {
+    AddSigner("ES256K", func(conf IConfig) ISigner {
         return SignerES256K(conf)
     })
 }
